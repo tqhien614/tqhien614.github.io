@@ -39,16 +39,13 @@ body {
     display: flex;  
     flex-direction: column;  
 }  
-
-.content {  
-    flex: 1; /* This allows the content area to grow and take up available space */  
-}  
+  
 
 footer {  
-    background-color: #333; /* Example background color */  
-    color: white; /* Example text color */  
+    background-color: #333;
+    color: white; 
     text-align: center;  
-    padding: 10px; /* Example padding */ 
+    padding: 10px; 
     bottom: 0; 
     position: fixed;
     width: 100%;
