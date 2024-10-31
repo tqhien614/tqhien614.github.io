@@ -1,14 +1,28 @@
 span#id1 {
-    color: rgb(0, 86, 160);
-    text-decoration: line-through;
+    color: red;
 }
-.hightlight {
+span.highlight {
     background-color: yellow;
-        color: blue;
+    color: blue;
 }
 #id2{
     color: green;
+} 
+
+p+p {
+    font-size: italic;
+    font-weight: bold;
 }
-span{
-    
+div.items>a {
+    color: green;
+    font-weight: bold;
+}
+.red {
+    color: red
+}
+.underline{
+    text-decoration: underline;
+}
+.bold{
+    font-weight: bold;
 }
