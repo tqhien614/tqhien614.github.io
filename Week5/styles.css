@@ -4,7 +4,7 @@ body{
     background: #ccc;
 }
 
-nav#topmenu ul{
+#topmenu ul{
     list-style: none;
     background-color: #444;
     text-align: center;
@@ -12,7 +12,7 @@ nav#topmenu ul{
     margin: 0;
 }
 
-nav#topmenu li{
+#topmenu li{
     font-size: 24px;
     line-height: 40px;
     height: 40px;
@@ -20,12 +20,12 @@ nav#topmenu li{
     padding:20px;
 }
 
-nav#topmenu a {
+#topmenu a {
     text-decoration: none;
     color:#fff;
 
 }
-nav#topmenu a:hover{
+#topmenu a:hover{
     font-size: larger;
     color:pink;
 }
