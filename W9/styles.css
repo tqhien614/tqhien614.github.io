@@ -1,0 +1,44 @@
+body {
+    padding: center;
+    height: 100vh;
+    width: 50%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color:pink;
+    text-align: center;
+    b
+}
+.title{
+    text-align: center;
+    color:white;
+}
+.calculator {
+    background: white;
+    padding: 10px;
+}
+
+input {
+    width: 50%;
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #9d4caf;
+    color: white;
+}
+
+.error {
+    color: red;
+    margin: 5px 0;
+}
+
+#result {
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f8f8;
+}
