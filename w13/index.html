@@ -1,0 +1,79 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Registration Form</title>  
+    <link rel="stylesheet" href="style.css">
+</head>  
+<body>  
+
+<h2>Registration Form</h2>  
+<form id="registrationForm">  
+    <label for="username">Username:</label><br>  
+    <input type="text" id="username" name="username" required><br>  
+    <span class="error" id="usernameError"></span><br>  
+
+    <label for="email">Email:</label><br>  
+    <input type="email" id="email" name="email" required><br>  
+    <span class="error" id="emailError"></span><br>  
+
+    <label for="password">Password:</label><br>  
+    <input type="password" id="password" name="password" required><br>  
+    <span class="error" id="passwordError"></span><br>  
+
+    <label for="confirmPassword">Confirm Password:</label><br>  
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br>  
+    <span class="error" id="confirmPasswordError"></span><br><br>  
+
+    <input type="submit" value="Register">  
+    <div class="success" id="successMessage"></div>  
+</form>  
+
+<script>  
+    document.getElementById("registrationForm").onsubmit = function(event) {  
+
+        event.preventDefault();  
+
+        document.getElementById("usernameError").innerText = "";  
+        document.getElementById("emailError").innerText = "";  
+        document.getElementById("passwordError").innerText = "";  
+        document.getElementById("confirmPasswordError").innerText = "";  
+        document.getElementById("successMessage").innerText = "";  
+
+        const username = document.getElementById("username").value.trim();  
+        const email = document.getElementById("email").value.trim();  
+        const password = document.getElementById("password").value;  
+        const confirmPassword = document.getElementById("confirmPassword").value;  
+
+        let isValid = true;  
+
+        if (username.length < 3) {  
+            document.getElementById("usernameError").innerText = "Username must be at least 3 characters long.";  
+            isValid = false;  
+        }  
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;  
+        if (!emailPattern.test(email)) {  
+            document.getElementById("emailError").innerText = "Please enter a valid email address.";  
+            isValid = false;  
+        }  
+ 
+        if (password.length < 6) {  
+            document.getElementById("passwordError").innerText = "Password must be at least 6 characters long.";  
+            isValid = false;  
+        }  
+
+        if (password !== confirmPassword) {  
+            document.getElementById("confirmPasswordError").innerText = "Passwords do not match.";  
+            isValid = false;  
+        }  
+
+        if (isValid) {  
+            document.getElementById("successMessage").innerText = "Registration successful!";  
+    
+        }  
+    };  
+</script>  
+
+</body>  
+</html>
