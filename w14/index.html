@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Routine Plan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Fitness Routine Plan</h1>
+        <p>Your Personalized Workout Schedule</p>
+    </header>
+
+    <!-- Form Section -->
+    <section class="form-section">
+        <h2>Enter Your Details</h2>
+        <form id="routineForm">
+            <div class="input-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+            <div class="input-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" min="1" placeholder="Your Age" required>
+            </div>
+            <div class="input-group">
+                <label for="weight">Weight (kg)</label>
+                <input type="number" id="weight" min="1" placeholder="Your Weight" required>
+            </div>
+            <div class="input-group">
+                <label for="height">Height (cm)</label>
+                <input type="number" id="height" min="50" placeholder="Your Height" required>
+            </div>
+            <div class="input-group">
+                <label for="bodyfat">Body Fat Percentage (%)</label>
+                <input type="number" id="bodyfat" min="0" max="100" placeholder="Your Body Fat %" required>
+            </div>
+            <div class="input-group">
+                <label for="activity">Activity Level</label>
+                <select id="activity">
+                    <option value="1.2">Sedentary</option>
+                    <option value="1.375">Lightly active</option>
+                    <option value="1.55">Moderately active</option>
+                    <option value="1.725">Very active</option>
+                    <option value="1.9">Super active</option>
+                </select>
+            </div>
+            <button type="button" onclick="calculateTDEE()">Calculate TDEE</button>
+            <p id="message"></p>
+        </form>
+    </section>
+
+    <!-- Routine Section -->
+    <section class="routine-section">
+        <h2>Weekly Fitness Routine</h2>
+        <div class="routine-container">
+            <div class="routine-card">
+                <h3>Monday</h3>
+                <p>Cardio: 30-minute run, Strength: Upper body workout</p>
+            </div>
+            <div class="routine-card">
+                <h3>Tuesday</h3>
+                <p>Yoga and core strength exercises</p>
+            </div>
+            <div class="routine-card">
+                <h3>Wednesday</h3>
+                <p>Cardio: Cycling for 45 minutes</p>
+            </div>
+            <div class="routine-card">
+                <h3>Thursday</h3>
+                <p>Strength: Lower body workout</p>
+            </div>
+            <div class="routine-card">
+                <h3>Friday</h3>
+                <p>HIIT workout: 20 minutes</p>
+            </div>
+            <div class="routine-card">
+                <h3>Saturday</h3>
+                <p>Rest or light activity (e.g., walking)</p>
+            </div>
+            <div class="routine-card">
+                <h3>Sunday</h3>
+                <p>Full-body strength workout</p>
+            </div>
+        </div>
+    </section>
+    <!-- Image Section -->
+    <section class="image-section">
+        <h2>Stay Motivated</h2>
+        <img src="hien.jpg" alt="Motivational Fitness Image" style="width: 100%; border-radius: 10px;">
+    </section>
+    
+     <!-- Contact Section -->
+     <section class="contact-section">
+        <h2>Contact Us</h2>
+        <p>Email: cuongendonganh@gmail.com</p>
+        <p>Phone: 098 925 5150</p>
+    </section>
+
+    <!-- Tip Section -->
+    <section class="tip-section">
+        <h2>Fitness Tip of the Day</h2>
+        <button onclick="showTip()">Get a Tip</button>
+        <p id="tip"></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Fitness Guide | Stay Strong, Stay Healthy!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
