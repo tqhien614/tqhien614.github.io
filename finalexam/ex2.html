@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technology Times</title>
+  <style>
+    #main-header {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.main-nav a{
+   color: red;
+}
+
+.main-nav {
+    padding: 10px;
+    background-color: #fff;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.foodhouse {
+    border-left: 4px solid blue;
+    padding: 20px;
+    margin: 20px;
+    background-color: #fff;
+}
+
+article p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+article > h2 {
+    color: navy;
+    margin-bottom: 20px;
+}
+
+h2 + .article-content {
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 20px;
+}
+
+[href="#"] {
+    color: #444;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+.nav-link + .nav-link {
+    margin-left: 10px;
+}
+
+.highlight {
+    background-color: #ffffd0;
+    padding: 10px;
+}
+
+th {
+    background-color: #f5f5f5;
+}
+
+tr:hover {
+    background-color: #f9f9f9;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #fafafa;
+}
+  </style>
+</head>
+<body>
+    <header id="main-header">
+        <h1>Food house</h1>
+    </header>
+    
+    <nav class="main-nav">
+        <a href="#" class="nav-link">Appetizers &reg;</a>  
+        <a href="#" class="nav-link">Main Course</a> 
+        <a href="#" class="nav-link">Desserts</a>
+        <a href="#" class="nav-link">Drinks</a>
+    </nav>
+    
+    <section class="foodhouse">
+        <article>
+            <h2>Our menu 2024</h2>
+            <div class="highlight">
+                New foods appear every day!
+            </div>
+            <table>
+                
+                    <tr>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                
+                
+                    <tr>
+                        <td>Boiled egg</td>
+                        <td>15 &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>Roasted Beef</td>
+                        <td>50 &euro;</td>
+                    </tr>
+                    <tr>
+                        <td>Boiled Vegetables</td>
+                        <td>10 &euro;</td>
+                    </tr>
+            </table>
+        </article>
+    </section>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator</title>
+    <style>
+        table {
+            width: 50%;
+            margin: 20px;
+        }
+       
+        th {
+            background-color: #1866db;
+            color: white;
+            padding: 10px;
+        }
+        td {
+            padding: 10px;
+        }
+        .result {
+            font-size: 20px;
+        }
+    
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Subject &REG;</th>
+
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Math</td>
+                <td><input type="number" class="grade"></td>
+            </tr>
+            <tr>
+                <td>Science</td>
+                <td><input type="number" class="grade"></td>
+            </tr>
+            <tr>
+                <td>English</td>
+                <td><input type="number" class="grade"></td>
+            </tr>
+            <tr>
+                <td>History</td>
+                <td><input type="number" class="grade"></td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+        <button onclick="calculateAverage()">Calculate Average</button>
+    </div>
+    <div class="result" id="result"></div>
+    <script>
+        function calculateAverage() {
+            const grades = document.querySelectorAll('.grade');
+            const gradeValues = Array.from(grades).map(grade => parseFloat(grade.value) || 0);
+            const total = gradeValues.reduce((sum, grade) => sum + grade, 0);
+            const average = total / 4;
+            const result = document.getElementById('result');
+            result.textContent = 'Average Grade: ' + average.toFixed(2);
+        }
+    </script>
+</body>
+</html>
